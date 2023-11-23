@@ -2,6 +2,7 @@ package org.example;
 
 public class HibernateCrudUsageExample {
     public static void main(String[] args) {
+        FlyWayInterface.fwMigrate();
         PersonService personService = new PersonService();
 
         Person newPerson = new Person();
