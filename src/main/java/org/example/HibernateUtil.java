@@ -4,11 +4,11 @@ import lombok.Getter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+@Getter
 public class HibernateUtil {
     private static final HibernateUtil INSTANCE;
 
-    @Getter
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     static {
         INSTANCE = new HibernateUtil();
@@ -17,6 +17,8 @@ public class HibernateUtil {
     private HibernateUtil() {
         sessionFactory = new Configuration()
                 .addAnnotatedClass(Person.class)
+                .addAnnotatedClass(Client.class)
+                .addAnnotatedClass(Planet.class)
                 .buildSessionFactory();
     }
 

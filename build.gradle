@@ -25,10 +25,19 @@ dependencies {
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
     implementation 'org.hibernate:hibernate-entitymanager:5.6.15.Final'
 
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '8.0.1.Final'
 
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     compileOnly 'org.projectlombok:lombok:1.18.24'
+
+    // https://mvnrepository.com/artifact/jakarta.el/jakarta.el-api
+    implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '5.0.1'
+
+    // https://mvnrepository.com/artifact/org.glassfish/jakarta.el
+    implementation group: 'org.glassfish', name: 'jakarta.el', version: '4.0.2'
+
 }
 
 test {
