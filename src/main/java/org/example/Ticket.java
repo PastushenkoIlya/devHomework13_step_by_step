@@ -15,17 +15,18 @@ public class Ticket {
     private long id;
 
     @CreationTimestamp
-    private Instant createdOn;
+    @Column(name = "created_at")
+    private Instant createdAt;
 
     @ManyToOne
     @JoinColumn(name="client_id", nullable=false)
-    private Client client_id ;
+    private Client clientId ;
 
     @ManyToOne
-    @JoinColumn(name = "planet_id", nullable = false)
-    private Planet from_planet_id;
+    @JoinColumn(name = "planet_id", nullable = false, insertable = false, updatable = false)
+    private Planet fromPlanetId;
 
     @ManyToOne
-    @JoinColumn(name = "planet_id", nullable = false)
-    private Planet to_planet_id;
+    @JoinColumn(name = "planet_id", nullable = false, insertable = false, updatable = false)
+    private Planet toPlanetId;
 }

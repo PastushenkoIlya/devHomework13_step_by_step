@@ -16,5 +16,5 @@ public class Planet {
     private String id;
 
     @Column(length = 500)
-    String name;
+    private String name;
 }

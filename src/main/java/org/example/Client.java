@@ -13,6 +13,6 @@ public class Client {
     private long id;
 
     @Length(min = 3, max = 200)
-    String name;
+    private String name;
 
 }

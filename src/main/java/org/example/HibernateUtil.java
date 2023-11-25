@@ -19,6 +19,7 @@ public class HibernateUtil {
                 .addAnnotatedClass(Person.class)
                 .addAnnotatedClass(Client.class)
                 .addAnnotatedClass(Planet.class)
+                .addAnnotatedClass(Ticket.class)
                 .buildSessionFactory();
     }
 
